@@ -12,40 +12,45 @@ const NavWrapper = styled.nav`
     >li{
       width: 33.333%;
       text-align: center;
-      padding: 4px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .icon{
-        width: 24px;
-        height: 24px;
-      }
+      >a{
+        display: flex;
+        padding: 4px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .icon{
+          width: 24px;
+          height: 24px;
+         }
+       }
     }
   }
 `;
 
 
-const Nav = ()=>{
+const Nav = () => {
   return (
     <NavWrapper>
       <ul>
         <li>
-          <Icon name="tag"/>
-          <Link to="/tags">标签</Link>
+          <Link to="/tags">
+            <Icon name="tag"/>标签
+          </Link>
         </li>
         <li>
-          <Icon name="money"/>
-          <Link to="/money">记账</Link>
+          <Link to="/money">
+            <Icon name="money"/>记账
+          </Link>
         </li>
         <li>
-          <Icon name="chart"/>
-          <Link to="/bookkeeping">统计</Link>
+          <Link to="/bookkeeping">
+            <Icon name="chart"/>统计
+          </Link>
         </li>
       </ul>
     </NavWrapper>
   );
-}
+};
 
 export default Nav;
 
