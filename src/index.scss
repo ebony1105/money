@@ -35,7 +35,17 @@ button{
   font-family: inherit;
 }
 
+:focus{
+  outline: none;
+}
+
 .icon{
   width: 1em;
   display: inline-block;
+}
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
 }
