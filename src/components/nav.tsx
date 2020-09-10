@@ -40,7 +40,7 @@ const Nav = ()=>{
         </li>
         <li>
           <Icon name="chart"/>
-          <Link to="/statistics">统计</Link>
+          <Link to="/bookkeeping">统计</Link>
         </li>
       </ul>
     </NavWrapper>
