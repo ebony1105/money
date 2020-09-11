@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24bf9c79-ff85-4fc8-98cc-7e486baf362a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lib/Id.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/createId.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Money.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Money.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Money/TagsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Money/TagsSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Tags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Tags.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/useTags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/useTags.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/useTags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/useTags.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +44,7 @@
           <entry key="scss" value="7" />
           <entry key="svg" value="3" />
           <entry key="ts" value="1" />
-          <entry key="tsx" value="54" />
+          <entry key="tsx" value="57" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -58,7 +59,7 @@
           <entry key="SCSS" value="7" />
           <entry key="SVG" value="3" />
           <entry key="TypeScript" value="1" />
-          <entry key="TypeScript JSX" value="52" />
+          <entry key="TypeScript JSX" value="55" />
           <entry key="tsconfig" value="2" />
         </counts>
       </usages-collector>
@@ -70,8 +71,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="10" />
           <entry key="scss" value="482" />
-          <entry key="tsx" value="10613" />
-          <entry key="txt" value="272" />
+          <entry key="tsx" value="10923" />
+          <entry key="txt" value="318" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -80,9 +81,9 @@
           <entry key="HTML" value="13" />
           <entry key="JavaScript" value="189" />
           <entry key="Less" value="184" />
-          <entry key="PLAIN_TEXT" value="312" />
+          <entry key="PLAIN_TEXT" value="358" />
           <entry key="SCSS" value="482" />
-          <entry key="TypeScript JSX" value="10395" />
+          <entry key="TypeScript JSX" value="10705" />
           <entry key="tsconfig" value="10" />
         </counts>
       </usages-collector>
@@ -96,18 +97,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Tag.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
@@ -116,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Tags.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+            <state relative-caret-position="310">
+              <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -152,10 +141,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Money/TagsSection.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+            <state relative-caret-position="304">
+              <caret line="52" column="54" lean-forward="true" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lib/Id.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/createId.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,10 +190,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/useTags.tsx">
+        <entry file="file://$PROJECT_DIR$/src/useTags.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="144">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -240,15 +262,17 @@
         <option value="$PROJECT_DIR$/src/views/Money/NoteSection.tsx" />
         <option value="$PROJECT_DIR$/src/views/Money/CategorySection.tsx" />
         <option value="$PROJECT_DIR$/src/views/Money/NumberPadSection.tsx" />
-        <option value="$PROJECT_DIR$/src/useTags.tsx" />
         <option value="$PROJECT_DIR$/src/index.scss" />
         <option value="$PROJECT_DIR$/src/Tag.tsx" />
         <option value="$PROJECT_DIR$/src/views/Tag.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/views/useTags.tsx" />
-        <option value="$PROJECT_DIR$/src/views/Money/TagsSection.tsx" />
         <option value="$PROJECT_DIR$/src/views/Money.tsx" />
         <option value="$PROJECT_DIR$/src/views/Tags.tsx" />
+        <option value="$PROJECT_DIR$/src/lib/createId.tsx" />
+        <option value="$PROJECT_DIR$/src/useTags.tsx" />
+        <option value="$PROJECT_DIR$/src/views/Money/TagsSection.tsx" />
+        <option value="$PROJECT_DIR$/src/lib/Id.tsx" />
       </list>
     </option>
   </component>
@@ -296,18 +320,6 @@
               <item name="money" type="b2602c69:ProjectViewProjectNode" />
               <item name="money" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="money" type="b2602c69:ProjectViewProjectNode" />
-              <item name="money" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="money" type="b2602c69:ProjectViewProjectNode" />
-              <item name="money" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -337,10 +349,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/views" />
       <recent name="$PROJECT_DIR$/src/icons" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -376,7 +388,7 @@
       <workItem from="1599816945045" duration="4501000" />
       <workItem from="1599829676707" duration="1806000" />
       <workItem from="1599831859816" duration="9294000" />
-      <workItem from="1599843292407" duration="279000" />
+      <workItem from="1599843292407" duration="1408000" />
     </task>
     <task id="LOCAL-00001" summary="update html">
       <created>1599381253436</created>
@@ -504,11 +516,18 @@
       <option name="project" value="LOCAL" />
       <updated>1599841463756</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="将tag:string 重构为tag：{ID：number,name:string}">
+      <created>1599843773781</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1599843773781</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60191000" />
+    <option name="totallyTimeSpent" value="61320000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -521,8 +540,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="31" width="1280" height="709" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24861" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24861" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -534,9 +554,9 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49960285" weight="0.32901135" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.50119144" side_tool="true" visible="true" weight="0.32901135" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5019857" side_tool="true" weight="0.3241491" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32901135" />
-      <window_info anchor="bottom" id="TypeScript" order="11" sideWeight="0.4988086" weight="0.32576984" />
+      <window_info anchor="bottom" id="TypeScript" order="11" sideWeight="0.4980143" weight="0.3241491" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -554,9 +574,9 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49960285" weight="0.32901135" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.50119144" side_tool="true" weight="0.32901135" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5019857" side_tool="true" weight="0.3241491" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32901135" />
-      <window_info anchor="bottom" id="TypeScript" order="11" sideWeight="0.4988086" weight="0.32901135" />
+      <window_info anchor="bottom" id="TypeScript" order="11" sideWeight="0.4980143" visible="true" weight="0.3241491" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -612,7 +632,8 @@
     <MESSAGE value="收集表单数据" />
     <MESSAGE value="重构 表单数据收集" />
     <MESSAGE value="创建tags/:tags路由" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建tags/:tags路由" />
+    <MESSAGE value="将tag:string 重构为tag：{ID：number,name:string}" />
+    <option name="LAST_COMMIT_MESSAGE" value="将tag:string 重构为tag：{ID：number,name:string}" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -719,16 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Bookkeeping.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -817,23 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/useTags.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Money/TagsSection.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Money.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -844,13 +838,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/createId.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Tags.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+        <state relative-caret-position="310">
+          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/useTags.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Money/TagsSection.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="52" column="54" lean-forward="true" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/Id.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>
