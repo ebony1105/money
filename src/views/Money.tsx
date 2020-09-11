@@ -1,156 +1,22 @@
 import Layout from '../components/Layout';
 import React from 'react';
 import styled from 'styled-components';
+import {TagsSection} from './Money/TagsSection';
+import {NotesSection} from './Money/NotesSection';
+import {CategorySection} from './Money/CategorySection';
+import {NumberPadSection} from './Money/NumberPadSection';
 
-const TagSection = styled.section`
-  background: #FFFFFF;
-  padding: 12px 16px;
-  >ol{
-     margin: 0 -12px;
-   >li{
-      background: #D9D9D9;
-      border-radius: 18px;
-      display: inline-block;
-      padding: 4px 18px;
-      font-size: 14px;
-      margin: 8px 12px;
-      }
-  }
-  >button{
-     background: none;
-     border: none;
-     padding: 2px 4px;
-     border-bottom: 1px solid #333;
-     color: #666;
-     margin-top: 8px;
-  }
-`;
+const MyLayout = styled(Layout)`
+    display: flex;
+    flex-direction: column;
+    `;
 
-const NotesSection = styled.section`
-  background: #f5f5f5;
-  padding: 0px 16px;
-  font-size: 14px;
-  >label{
-     display: flex;
-     align-items: center;
-     >span{
-        margin-right: 16px;
-        white-space: nowrap;  
-     }
-     >input{
-        display: block;
-        width: 100%;
-        height: 72px;
-        background: none;
-        border: none;
-     }
-  }
-`;
-
-const CategorySection = styled.section` 
-   font-size: 24px;
-   >ul{
-      display: flex;
-      background: #c4c4c4;
-      >li{
-         width: 50%;
-         text-align: center;
-         padding: 16px 0;
-         position: relative;
-         &.selected::after{
-            //为什么不直接使用border-bottom： 3px solid grey呢？
-            //因为会导致点击元素的高度变化 不推荐使用
-            content: ''; //使用伪元素
-            display: block;
-            height: 4px;
-            background: #333;
-            position: absolute;
-            bottom:0;
-            width: 100%;
-            left: 0;   //保险起见 防止在其他浏览器出问题
-         }
-      }  
-   }
-`;
-
-
-const NumberPadSection = styled.section`
-  display: flex; 
-  //这里给的属性会影响后面的float：left； 
-  // 那样我们就不用给float：left 清除浮动了
-  flex-direction: column;
-  >.output{
-     background: white;
-     font-size: 36px;
-     line-height: 72px;
-     text-align:right;
-     padding: 0 16px;
-     box-shadow: inset 0 -5px 5px -5px rgba(0,0,0,0.25),
-                 inset 0 5px 5px -5px rgba(0,0,0,0.25); 
-       //上下都有阴影的实现 其中第一个是下阴影 先往上提5像素的阴影，再往下拉
-  }
-  >.pad{
-    //按钮一字排开 用flex会导致ok那一行和下一行出现空隙
-    // display:flex;
-    // flex-wrap: wrap;
-    >button{
-       font-size: 18px;
-       float: left;
-       width: 25%;
-       height: 64px;
-       border: none;
-       &.ok{
-          float: right;
-          height: 128px;      
-       }
-       &.zero{
-          width: 50%;
-       }
-       &:nth-child(1){
-          background: #f2f2f2;
-       }
-       &:nth-child(2),
-       &:nth-child(5){
-          background: #e0e0e0;
-       }
-       &:nth-child(3),
-       &:nth-child(6),
-       &:nth-child(9){
-          background: #d3d3d3;
-       }
-       &:nth-child(4),
-       &:nth-child(7),
-       &:nth-child(10){
-          background: #c1c1c1;
-       }
-       &:nth-child(8),
-       &:nth-child(11),
-       &:nth-child(13){
-          background: #b8b8b8;
-       }
-       &:nth-child(14)
-       {
-          background: #a9a9a9;
-       }
-       &:nth-child(12){
-          background: #9a9a9a;
-       }
-    }
-  }
-`;
 
 function Money() {
+    //如果这里使用className会影响之前的ts语句
   return (
-    <Layout>
-      <TagSection>
-        <ol>
-          <li>衣</li>
-          <li>食</li>
-          <li>住</li>
-          <li>行</li>
-        </ol>
-        <button>新增标签</button>
-      </TagSection>
+    <MyLayout>
+      <TagsSection/>
       <NotesSection>
         <label>
           <span>备注</span>
@@ -182,7 +48,7 @@ function Money() {
           <button className="dot">.</button>
         </div>
       </NumberPadSection>
-    </Layout>
+    </MyLayout>
   );
 }
 
