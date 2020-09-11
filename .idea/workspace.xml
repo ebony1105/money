@@ -4,10 +4,6 @@
     <list default="true" id="24bf9c79-ff85-4fc8-98cc-7e486baf362a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Money.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Money.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Money/CategorySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Money/CategorySection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Money/NoteSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Money/NoteSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Money/NumberPadSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Money/NumberPadSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Money/TagsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Money/TagsSection.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -71,8 +67,8 @@
           <entry key="js" value="189" />
           <entry key="json" value="10" />
           <entry key="scss" value="388" />
-          <entry key="tsx" value="8967" />
-          <entry key="txt" value="236" />
+          <entry key="tsx" value="9239" />
+          <entry key="txt" value="244" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -81,9 +77,9 @@
           <entry key="HTML" value="13" />
           <entry key="JavaScript" value="189" />
           <entry key="Less" value="150" />
-          <entry key="PLAIN_TEXT" value="276" />
+          <entry key="PLAIN_TEXT" value="284" />
           <entry key="SCSS" value="388" />
-          <entry key="TypeScript JSX" value="8783" />
+          <entry key="TypeScript JSX" value="9055" />
           <entry key="tsconfig" value="10" />
         </counts>
       </usages-collector>
@@ -123,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Money/NumberPadSection.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-362">
-              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="433">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -132,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/Money.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+            <state relative-caret-position="260">
+              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -174,11 +170,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Money/CategorySection.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="49" column="35" lean-forward="true" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+            <state relative-caret-position="331">
+              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -249,9 +245,9 @@
         <option value="$PROJECT_DIR$/src/views/Money/NumberPadSection/generateOutput.tsx" />
         <option value="$PROJECT_DIR$/src/views/Money/TagsSection.tsx" />
         <option value="$PROJECT_DIR$/src/views/Money/NoteSection.tsx" />
-        <option value="$PROJECT_DIR$/src/views/Money.tsx" />
-        <option value="$PROJECT_DIR$/src/views/Money/NumberPadSection.tsx" />
         <option value="$PROJECT_DIR$/src/views/Money/CategorySection.tsx" />
+        <option value="$PROJECT_DIR$/src/views/Money/NumberPadSection.tsx" />
+        <option value="$PROJECT_DIR$/src/views/Money.tsx" />
       </list>
     </option>
   </component>
@@ -377,7 +373,7 @@
       <workItem from="1599813589802" duration="3347000" />
       <workItem from="1599816945045" duration="4501000" />
       <workItem from="1599829676707" duration="1806000" />
-      <workItem from="1599831859816" duration="2095000" />
+      <workItem from="1599831859816" duration="2918000" />
     </task>
     <task id="LOCAL-00001" summary="update html">
       <created>1599381253436</created>
@@ -477,11 +473,18 @@
       <option name="project" value="LOCAL" />
       <updated>1599828651877</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="收集表单数据">
+      <created>1599834211272</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1599834211272</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52713000" />
+    <option name="totallyTimeSpent" value="53536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -583,7 +586,8 @@
     <MESSAGE value="NumberPad wip work in process" />
     <MESSAGE value="NumberPad 基本功能实现" />
     <MESSAGE value="NumberPadSection 重构" />
-    <option name="LAST_COMMIT_MESSAGE" value="NumberPadSection 重构" />
+    <MESSAGE value="收集表单数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="收集表单数据" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -782,32 +786,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Money.tsx">
+    <entry file="file://$PROJECT_DIR$/src/views/Money/CategorySection.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        <state relative-caret-position="331">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Money/NumberPadSection.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-362">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="433">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Money/CategorySection.tsx">
+    <entry file="file://$PROJECT_DIR$/src/views/Money.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="49" column="35" lean-forward="true" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+        <state relative-caret-position="260">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
