@@ -27,11 +27,16 @@ const Wrapper = styled.section`
    }
 `;
 
-const CategorySection = ()=>{
+type Props={
+  value: '-' | '+',
+  onChange:(value:'-' | '+')=>void;
+};
+
+const CategorySection: React.FC<Props> = (props)=>{
   const categoryMap = {'-':'支出','+':'收入'};
   type Y = keyof typeof categoryMap;
   const [categoryList] = useState<Y[]>(['-','+']); //这个值只可能是加或者减 收缩范围
-  const [category,setCategory] = useState('-');
+  const category = props.value
   return (
     <Wrapper>
       <ul>
@@ -41,7 +46,7 @@ const CategorySection = ()=>{
             className={
               category === c ? 'selected' : ''}
             onClick={
-              () => { setCategory(c)}
+              () => { props.onChange(c)}
             }>{categoryMap[c]}</li>
         )}
       </ul>

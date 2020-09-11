@@ -34,11 +34,16 @@ const Wrapper = styled.section`
   }
 `;
 
-const TagsSection:React.FC = (props)=>
+type Props = {
+  value: string[],
+  onChange: (selected:string[]) => void,
+};
+
+const TagsSection:React.FC<Props> = (props)=>
 { //FunctionComponent 可以简写成 FC
   //初始化的时候告诉它是个字符串 tags是个字符串数组 那么tag必然为字符串
   const [tags,setTags] = useState<string[]>(['衣','食','住','行']);
-  const [selectedTags,setSelectedTags] = useState<string[]>([]);
+  const selectedTags = props.value;
   const onAddTag = ()=>{
     const tagName = window.prompt('新的标签名称为：');
     if (tagName !== null)
@@ -49,14 +54,14 @@ const TagsSection:React.FC = (props)=>
 
 
   const onToggleTag = (tag: string)=>{
-    const index = selectedTags.indexOf(tag)
+    const index = selectedTags.indexOf(tag);
     if(index >= 0)
     {
-      setSelectedTags(selectedTags.filter(t => t !== tag) );
+      props.onChange(selectedTags.filter(t => t !== tag));
       //如果tag被选中的话，就复制所有没有被选中的tag，作为新的selectedTag。
     }
     else{
-      setSelectedTags([...selectedTags,tag])
+      props.onChange([...selectedTags,tag])
     }
   };
   return (
