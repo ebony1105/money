@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, {useState} from 'react';
 
 const Wrapper = styled.section`
   display: flex; 
@@ -67,10 +67,56 @@ const Wrapper = styled.section`
 `;
 
 const NumberPadSection = ()=>{
+  const [output,setOutput] = useState('0');
+  const onClickButtonWrapper = (e:React.MouseEvent)=>
+  {
+    const text = (e.target as HTMLButtonElement).textContent;
+    //这里面可能编译的时候会认为e.target不一定是一个button。
+    //用as可以强制转换
+    if (text === null)
+    {
+      return;
+    }
+    switch (text) {
+      case '0':
+      case '1':
+      case '2':
+      case '3':
+      case '4':
+      case '5':
+      case '6':
+      case '7':
+      case '8':
+      case '9':
+        if (output === '0')
+        {
+          setOutput(text);
+        }
+        else
+        {
+          setOutput(output+text)
+        }
+        break;
+      case '删除':
+        console.log('删除');
+        break;
+      case '清空':
+        console.log('清空');
+        break;
+      case '.':
+        console.log('.');
+        break;
+      case 'OK':
+        console.log('OK');
+        break;
+    }
+  };
   return (
     <Wrapper>
-      <div className="output">100</div>
-      <div className="pad clearfix">
+      <div className="output">
+        {output}
+      </div>
+      <div className="pad clearfix" onClick={onClickButtonWrapper}>
         <button>1</button>
         <button>2</button>
         <button>3</button>
@@ -88,6 +134,6 @@ const NumberPadSection = ()=>{
       </div>
     </Wrapper>
   );
-}
+};
 
 export {NumberPadSection};    //或者使用 export {NumberPadSection};

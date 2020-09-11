@@ -37,6 +37,7 @@ const CategorySection = ()=>{
       <ul>
         {categoryList.map( c=>
           <li
+            key={c}
             className={
               category === c ? 'selected' : ''}
             onClick={
