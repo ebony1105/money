@@ -47,9 +47,6 @@ const TagsSection:React.FC = (props)=>
     }
   };
 
-  const getClass = (tag:string) => {
-    selectedTags.indexOf(tag) >=0 ? 'selected' : '';
-  };
 
   const onToggleTag = (tag: string)=>{
     const index = selectedTags.indexOf(tag)
@@ -66,8 +63,10 @@ const TagsSection:React.FC = (props)=>
     <Wrapper>
       <ol>
         {tags.map(tag =>
-          <li key={tag} onClick={
-            ()=>{onToggleTag(tag)}} className={getClass(tag)}
+          <li key={tag}
+              onClick={
+            ()=>{onToggleTag(tag)}}
+              className={selectedTags.indexOf(tag) >=0 ? 'selected' : ''}
           >{tag}</li>
         )}
       </ol>

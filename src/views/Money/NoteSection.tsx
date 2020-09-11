@@ -25,7 +25,7 @@ const Wrapper = styled.section`
 const NoteSection :React.FC = () => {
   const [note,setNote] = useState('');
   const refInput = useRef<HTMLInputElement>(null);
-  const x = ()=>{
+  const onBlur = ()=>{
     if (refInput.current !== null)
     {
       setNote(refInput.current.value);
@@ -37,7 +37,7 @@ const NoteSection :React.FC = () => {
         <span>备注</span>
         <input type="text" placeholder="在这里添加备注"
                defaultValue={note}
-               onBlur={x}
+               onBlur={onBlur}
         />
       </label>
     </Wrapper>

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import React from 'react';
 
-const NumberPadSection = styled.section`
+const Wrapper = styled.section`
   display: flex; 
   //这里给的属性会影响后面的float：left； 
   // 那样我们就不用给float：left 清除浮动了
@@ -64,5 +65,29 @@ const NumberPadSection = styled.section`
     }
   }
 `;
+
+const NumberPadSection = ()=>{
+  return (
+    <Wrapper>
+      <div className="output">100</div>
+      <div className="pad clearfix">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>删除</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>清空</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button className="ok">OK</button>
+        <button className="zero">0</button>
+        <button className="dot">.</button>
+      </div>
+    </Wrapper>
+  );
+}
 
 export {NumberPadSection};    //或者使用 export {NumberPadSection};
