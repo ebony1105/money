@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import * as React from 'react';
 import {useState} from 'react';
+import {useTags} from '../useTags';
 
 const Wrapper = styled.section`
   background: #FFFFFF;
@@ -42,7 +43,7 @@ type Props = {
 const TagsSection:React.FC<Props> = (props)=>
 { //FunctionComponent 可以简写成 FC
   //初始化的时候告诉它是个字符串 tags是个字符串数组 那么tag必然为字符串
-  const [tags,setTags] = useState<string[]>(['衣','食','住','行']);
+  const {tags,setTags} = useTags();
   const selectedTags = props.value;
   const onAddTag = ()=>{
     const tagName = window.prompt('新的标签名称为：');

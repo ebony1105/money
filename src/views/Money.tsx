@@ -5,8 +5,6 @@ import {TagsSection} from './Money/TagsSection';
 import {NoteSection} from './Money/NoteSection';
 import {CategorySection} from './Money/CategorySection';
 import {NumberPadSection} from './Money/NumberPadSection';
-import {Simulate} from 'react-dom/test-utils';
-import select = Simulate.select;
 
 const MyLayout = styled(Layout)`
     display: flex;

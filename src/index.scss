@@ -42,6 +42,7 @@ button{
 .icon{
   width: 1em;
   display: inline-block;
+  height: 1em;
 }
 
 .clearfix::after{
@@ -49,3 +50,10 @@ button{
   display: block;
   clear: both;
 }
+
+.oneLine{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
