@@ -5,9 +5,9 @@ import * as serviceWorker from './serviceWorker';
 import 'index.scss';
 
 ReactDOM.render(
-  <React.StrictMode>
+  //<React.StrictMode>
     <App/>
-  </React.StrictMode>,
+ // </React.StrictMode>,  这个导致了NoteSection打印两次
   document.getElementById('root')
 );
 
