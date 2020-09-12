@@ -5,6 +5,9 @@ import Layout from 'components/Layout';
 import Icon from '../components/Icon';
 import {Button} from '../components/Button';
 import styled from 'styled-components';
+import {Input} from '../components/Input';
+import {CenterContent} from '../components/Center';
+import {Space} from '../components/Space';
 
 
 type Params = {
@@ -21,26 +24,31 @@ const TopBar = styled.header`
    align-items: center;
 `;
 
+const InputWrapper = styled.section`
+  background: white;
+  margin: 0px 16px;
+  margin-top: 8px;
+`;
+
 const Tag: React.FC = (props) => {
   const {findTag} = useTags();
   let {id} = useParams<Params>();
   const tag = findTag(parseInt(id));
   return (
     <Layout>
-      <header>
+      <TopBar>
         <Icon name="left"/>
         <span>编辑标签</span>
-        <Icon name="right"/>
-      </header>
-      <div>
-        <label>
-          <span>标签名</span>
-          <input type="text" placeholder="在这里添加备注"/>
-        </label>
-      </div>
-      <div>
+        <Icon/>
+      </TopBar>
+      <InputWrapper>
+        <Input label="标签名" type="text" placeholder="标签名" value={tag.name}/>
+      </InputWrapper>
+      <CenterContent>
+        <Space/>
+        <Space/>
         <Button>删除标签</Button>
-      </div>
+      </CenterContent>
     </Layout>
   );
 };
