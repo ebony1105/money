@@ -1,9 +1,10 @@
-import Layout from '../components/Layout';
+import Layout from 'components/Layout';
 import React from 'react';
-import {useTags} from '../useTags';
+import {useTags} from 'useTags';
 import styled from 'styled-components';
-import Icon from '../components/Icon';
+import Icon from 'components/Icon';
 import {Link} from 'react-router-dom';
+import {Button} from 'components/Button';
 
 
 const TagList = styled.ol`
@@ -35,15 +36,7 @@ const Space = styled.div`
 `;
 
 
-const Button = styled.button`
-   font-size: 18px;
-   border: none;
-   padding: 8px 12px;
-   background: #767676;
-   border-radius: 4px;
-   color: white;
-   
-`;
+
 
 function Tags() {
   const {tags, setTags} = useTags(); //相当于

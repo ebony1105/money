@@ -5,6 +5,13 @@ import React from 'react';
 
 //如何require一个文件夹
 
+
+
+type Props ={
+  name?: string;
+};
+
+
 let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
 
 try{
@@ -14,16 +21,14 @@ catch(error){
   console.log(error);
 }
 
-type Props ={
-  name: string;
-};
-
 const Icon =(props:Props) =>{
   return(
     <svg className="icon">
-      <use xlinkHref={'#'+props.name}/>
+      {props.name && <use xlinkHref={'#'+props.name}/>}
     </svg>
   );
 };
+
+//如果左边存在 执行右边 不存在则不执行。
 
 export default Icon;
