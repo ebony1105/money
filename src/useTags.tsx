@@ -24,11 +24,16 @@ const useTags = () =>
     }
   };
   const updateTag = (id:number, obj:{name:string}) => {
+    //获取你要改的tag的下标
     const index = findTagIndex(id);
     //深拷贝 tags 得到 tagsClone
+    // vue: tags.splice(index,1,{id:id,name:obj.name})
+    // react中不推荐直接修改原数组
+    //react中使用 tags.splice(index,1,{id:id,name:obj.name}) 这个的话，会认为两者是一样的，不会发生改变。
     const tagsClone = JSON.parse(JSON.stringify(tags));
     //把 tagsClone 的第 index 删掉， 换成{id:id,name:obj.name}
     tagsClone.splice(index,1,{id:id,name:obj.name});
+    //react强调不可变数据 tags tagsClone
     setTags(tagsClone);
   };
   return{tags, setTags,findTag,updateTag,findTagIndex}; //返回数组会出问题
