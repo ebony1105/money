@@ -36,7 +36,15 @@ const useTags = () =>
     //react强调不可变数据 tags tagsClone
     setTags(tagsClone);
   };
-  return{tags, setTags,findTag,updateTag,findTagIndex}; //返回数组会出问题
+  const deleteTag = (id:number) => {
+     const index = findTagIndex(id);
+     const tagsClone = JSON.parse(JSON.stringify(tags));
+    tagsClone.splice(index,1);
+    //react强调不可变数据 tags tagsClone
+    setTags(tagsClone);
+  };
+
+  return{tags, setTags,findTag,updateTag,findTagIndex,deleteTag}; //返回数组会出问题
 };
 
 //封装一个hook
