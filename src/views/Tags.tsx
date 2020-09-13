@@ -29,7 +29,7 @@ const TagList = styled.ol`
 
 
 function Tags() {
-  const {tags, setTags} = useTags(); //相当于
+  const {tags, addTag} = useTags(); //相当于
   return (
     <Layout>
       <TagList>
@@ -42,7 +42,7 @@ function Tags() {
       </TagList>
       <CenterContent>
         <Space/>
-        <Button>新增标签</Button>
+        <Button onClick={addTag}>新增标签</Button>
         <Space/>
       </CenterContent>
 

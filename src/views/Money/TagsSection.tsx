@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import * as React from 'react';
-import {useState} from 'react';
-import {useTags} from '../../useTags';
-import {createId} from '../../lib/createId';
+import {useTags} from 'useTags';
 
 const Wrapper = styled.section`
   background: #FFFFFF;
@@ -44,15 +42,9 @@ type Props = {
 const TagsSection:React.FC<Props> = (props)=>
 { //FunctionComponent 可以简写成 FC
   //初始化的时候告诉它是个字符串 tags是个字符串数组 那么tag必然为字符串
-  const {tags,setTags} = useTags();
+  const {tags,addTag} = useTags();
   const selectedTagIds = props.value;
-  const onAddTag = ()=>{
-    const tagName = window.prompt('新的标签名称为：');
-    if (tagName !== null)
-    {
-      setTags([...tags,{id:createId(),name:tagName}]);
-    }
-  };
+
 
 
   const onToggleTag = (tagId: number)=>{
@@ -77,7 +69,7 @@ const TagsSection:React.FC<Props> = (props)=>
           >{tag.name}</li>
         )}
       </ol>
-      <button onClick={onAddTag}>新增标签</button>
+      <button onClick={addTag}>新增标签</button>
     </Wrapper>
   );
 };
