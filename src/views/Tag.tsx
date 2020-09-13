@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTags} from 'useTags';
-import {useParams} from 'react-router';
+import {useParams,useHistory} from 'react-router';
 import Layout from 'components/Layout';
 import Icon from 'components/Icon';
 import {Button} from 'components/Button';
@@ -56,12 +56,22 @@ const Tag: React.FC = (props) => {
       </CenterContent>
     </div>
     );
+
+  const history = useHistory();
+
+  const onClickBack = ()=>{
+    history.goBack();
+    // window.history.back();//当我们使用hash的路由来发请求的时候，我们前进或者后退都不会发请求。
+    //history.back的bug：如果用户直接输入网址进入页面的话，后退则会进入一开始的页面，而不是自己本身的上一层目录
+    //推荐使用react中 React Dom 自定义的一个方法: useHistory
+  };
+
   return (
     <Layout>
       <TopBar>
-        <Icon name="left"/>
+        <Icon name="left" onClick={onClickBack}/>
         <span>编辑标签</span>
-        <Icon/>
+        <Icon />
       </TopBar>
       {tag ? tagContent(tag) : <CenterContent>tag不存在</CenterContent>}
     </Layout>
