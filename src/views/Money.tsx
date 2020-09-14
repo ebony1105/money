@@ -51,7 +51,7 @@ function Money() {
 
   //如果这里使用className会影响之前的ts语句
   return (
-    <MyLayout>
+    <MyLayout scrollTop={9999}>
       <TagsSection value={selected.tagIds}
                    onChange={tagIds => onChange({tagIds})}/>
       <NoteSection value={selected.note}
