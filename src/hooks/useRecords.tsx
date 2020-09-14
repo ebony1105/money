@@ -1,9 +1,9 @@
 import {useEffect, useState} from 'react';
-import {useUpadate} from './useUpate';
+import {useUpdate} from './useUpate';
 
 
 
-type RecordItem = {
+export type RecordItem = {
   tagIds: number[],
   note: string,
   category: '+'|'-',
@@ -25,9 +25,9 @@ const useRecords = () => {
   useEffect(()=>{
     setRecords(JSON.parse(window.localStorage.getItem('records')||'[]'));
   },[]);
-  useUpadate(()=>{
+  useUpdate(()=>{
     window.localStorage.setItem('records',JSON.stringify(records))
-  },[records]);
+  },records);
   const addRecord = (newRecord:newRecordItem) =>
   {
     if (newRecord.amount <= 0)

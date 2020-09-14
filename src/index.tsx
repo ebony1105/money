@@ -4,7 +4,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'index.scss';
 
-console.log('refresh page');
 
 ReactDOM.render(
   //<React.StrictMode>

@@ -1,13 +1,12 @@
 import {useEffect, useRef, useState} from 'react';
 import {createId} from '../lib/createId';
-import {useUpadate} from './useUpate';
+import {useUpdate} from './useUpate';
 
 
 const useTags = () => {
   const [tags, setTags] = useState<{ id: number; name: string }[]>([]);
   useEffect(()=>{
     //从localstorage中取数据
-    console.log('after mount');
     let localTags = JSON.parse(window.localStorage.getItem('tags')||'[]');
     if (localTags.length === 0)
     {
@@ -21,9 +20,9 @@ const useTags = () => {
     setTags(localTags);
   },[]);
 
-  useUpadate(()=>{
+  useUpdate(()=>{
     window.localStorage.setItem('tags',JSON.stringify(tags));
-  },[tags]);
+  },tags);
 
   const findTag = (id: number) => tags.filter(tag => tag.id === id)[0];
   const findTagIndex = (id: number) => {

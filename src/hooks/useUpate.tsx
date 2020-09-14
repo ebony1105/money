@@ -1,7 +1,7 @@
 import {useEffect, useRef} from 'react';
 
 
-const useUpadate = (fn:()=>void,deps:any[])=>{
+const useUpdate = (fn:()=>void,dependency:any[])=>{
   const count = useRef(0);
   useEffect(()=>{
     count.current += 1;
@@ -13,10 +13,10 @@ const useUpadate = (fn:()=>void,deps:any[])=>{
       fn();
       //window.localStorage.setItem('tags',JSON.stringify(tags));
     }
-  },deps);
+  },[fn,dependency]);
 //undefined => 空数组 => 新tag 第一次变化是有问题 我们需要将第一次变化不执行
 //只要tags里面的内容变化了，就会把tags里面的东西存到localstorage中去
 //不可变数据  每次修改都是一个新的对象
 };
 
-export {useUpadate};
+export {useUpdate};
