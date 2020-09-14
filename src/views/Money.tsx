@@ -41,10 +41,12 @@ function Money() {
   const {records,addRecord} = useRecords();
 
   const submit = () => {
-    addRecord(selected);
-    alert('保存成功');
-    setSelected(defaultFormData);
-  }
+    if (addRecord(selected))
+    {
+      alert('保存成功');
+      setSelected(defaultFormData);
+    }
+  };
 
     //如果这里使用className会影响之前的ts语句
   return (
