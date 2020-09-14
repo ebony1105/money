@@ -12,59 +12,56 @@ const MyLayout = styled(Layout)`
     flex-direction: column;
     `;
 
-type Category = '-'|'+';
+type Category = '-' | '+';
 
 const defaultFormData =
   {
-  tagIds:[] as number[],
-  note:'',
-  category:'-' as Category,
-  amount: 0,
-};
+    tagIds: [] as number[],
+    note: '',
+    category: '-' as Category,
+    amount: 0,
+  };
 
-
+const CategoryWrapper = styled.div`
+   background: #c4c4c4;
+`;
 
 
 function Money() {
-  const [selected,setSelected] = useState(defaultFormData);
+  const [selected, setSelected] = useState(defaultFormData);
 
   type Selected = typeof selected;
   //这里面允许obj只接受部分参数
-  const onChange = (obj: Partial<Selected>) =>
-  {
+  const onChange = (obj: Partial<Selected>) => {
     setSelected({
       ...selected,
       ...obj
-    })
+    });
   };
 
-  const {records,addRecord} = useRecords();
+  const {records, addRecord} = useRecords();
 
   const submit = () => {
-    if (addRecord(selected))
-    {
+    if (addRecord(selected)) {
       alert('保存成功');
       setSelected(defaultFormData);
     }
   };
 
-  useEffect(()=>{
-    setTimeout(()=>{
-      setSelected({...selected,amount:1000})
-    },3000);
-  },[])
 
-    //如果这里使用className会影响之前的ts语句
+  //如果这里使用className会影响之前的ts语句
   return (
     <MyLayout>
       <TagsSection value={selected.tagIds}
-                   onChange={ tagIds => onChange({tagIds})}/>
+                   onChange={tagIds => onChange({tagIds})}/>
       <NoteSection value={selected.note}
-                   onChange={(note)=>onChange({note})}/>
-      <CategorySection value={selected.category}
-                       onChange={(category) =>onChange({category})}/>
+                   onChange={(note) => onChange({note})}/>
+      <CategoryWrapper>
+        <CategorySection value={selected.category}
+                         onChange={(category) => onChange({category})}/>
+      </CategoryWrapper>
       <NumberPadSection value={selected.amount}
-                        onChange={(amount)=>{onChange({amount})}}
+                        onChange={(amount) => {onChange({amount});}}
                         onOk={submit}/>
     </MyLayout>
   );

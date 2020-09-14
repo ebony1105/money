@@ -51,7 +51,12 @@ const useTags = () => {
     }
   };
 
-  return {tags, setTags, findTag, updateTag, findTagIndex, deleteTag,addTag}; //返回数组会出问题
+  const getName = (id:number) =>{
+    const tag = tags.filter(t => t.id === id)[0]
+    return tag ? tag.name : '';
+  };
+
+  return {tags, findTag, deleteTag, updateTag,addTag,getName}; //返回数组会出问题
 };
 
 //封装一个hook
