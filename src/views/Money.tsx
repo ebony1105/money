@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {TagsSection} from './Money/TagsSection';
 import {NoteSection} from './Money/NoteSection';
@@ -47,6 +47,12 @@ function Money() {
       setSelected(defaultFormData);
     }
   };
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setSelected({...selected,amount:1000})
+    },3000);
+  },[])
 
     //如果这里使用className会影响之前的ts语句
   return (
