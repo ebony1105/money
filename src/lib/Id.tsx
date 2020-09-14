@@ -2,9 +2,6 @@ let id = 0;
 
 class Id{
   value: number;
-  startFrom1000(){
-    return this.value + 1000;
-  }
   constructor() {
     id += 1;
     this.value = id;

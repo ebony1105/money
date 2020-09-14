@@ -40,7 +40,7 @@ function Bookkeeping() {
   const hash: { [K: string]: RecordItem[] } = {};
   const selectedRecords = records.filter(r => r.category === category);
 
-  selectedRecords.map(r => {
+  selectedRecords.forEach(r => {
     const key = day(r.createdAt).format('YYYY年MM月DD');
     const value = r;
     if (!(key in hash)) {

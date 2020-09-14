@@ -2,49 +2,30 @@
 
 const generateOutput = (text:string,output = '0') =>
 {
-  switch (text) {
-    case '0':
-    case '1':
-    case '2':
-    case '3':
-    case '4':
-    case '5':
-    case '6':
-    case '7':
-    case '8':
-    case '9':
-      if (output === '0')
-      {
-        return text;
-      }
-      else
-      {
-        return output+text;
-      }
-      break;
-    case '删除':
-      if (output.length === 1)
-      {
-        return '';
-      }else {
-        return output.slice(0,-1) || '';
-      }
-      break;
-    case '清空':
+  if (text === '0' || text === '1' || text === '2' || text === '3' || text === '4' || text === '5' || text === '6' || text === '7' || text === '8' || text === '9') {
+    if (output === '0') {
+      return text;
+    }
+    else {
+      return output + text;
+    }
+  } else if (text === '删除') {
+    if (output.length === 1) {
       return '';
-      break;
-    case '.':
-      if (output.indexOf('.') >=0)
-      {
-        return output;
-      }
-      else{
-        return output+'.';
-      }
-      break;
-    default:
-      return '';
-      break;
+    } else {
+      return output.slice(0, -1) || '';
+    }
+  } else if (text === '清空') {
+    return '';
+  } else if (text === '.') {
+    if (output.indexOf('.') >= 0) {
+      return output;
+    }
+    else {
+      return output + '.';
+    }
+  } else {
+    return '';
   }
 }
 
